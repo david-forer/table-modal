@@ -2,14 +2,20 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./table.css";
+import Modal from './Modal';
+import Paginate from "./Paginate";
+
 
 const baseURL = `https://reqres.in/api/users`;
 
 const Table = () => {
   const [users, setUsers] = useState();
+  const [showModal, setShowModal] = useState(false)
+  const [currentPage, setCurrentPage] = useState()
  
-  function handleShow() {
+  const handleShow = () => {
     console.log('clicked')
+    setShowModal(prev => !prev)
   }
 
   useEffect(() => {
@@ -22,6 +28,7 @@ const Table = () => {
 
 
   return (
+    <>
       <div className="div">  
       <table>
         <thead>
@@ -45,7 +52,10 @@ const Table = () => {
             ))}
         </tbody>
       </table>
+      <Paginate currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       </div> 
+      <Modal showModal={showModal} setShowModal={setShowModal} />
+      </>
     )
   
           }

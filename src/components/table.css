@@ -42,7 +42,7 @@ form * {
 
 
 .div {
-  max-width: 120px;
+  /* max-width: 120px; */
   max-height: 250px;
 }
 
@@ -58,15 +58,16 @@ tbody {
 
 th,
 td {
-  border: 1px solid #ffffff;
+  border: 2px solid #d8d4d4;
   text-align: center;
   padding: 5px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 th {
   background-color: #1e1e1e;
   color: white;
+  min-width: 125px;
 }
 
 /* tr:nth-child(even) {background-color: #f2f2f2;} */

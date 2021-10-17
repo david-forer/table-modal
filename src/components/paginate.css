@@ -1,0 +1,23 @@
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 10px;
+  color: #66B2FF;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+  width: 100%;
+}
+
+.nav-pag {
+  display: flex;
+  justify-content: center;
+  
+}
+

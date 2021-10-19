@@ -13,7 +13,7 @@ const Modal = ({ showModal, setShowModal, users }) => {
         </header>
         <main className="modal_content">This is Modal Content</main>
         <footer className="modal_footer">
-          <button className="close"  onClick={() => window.close()}>
+          <button className="close"  onClick={() => setShowModal(prev => !prev)}>
             <HiX alt="close" />
           </button>
         </footer>

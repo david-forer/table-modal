@@ -62,7 +62,7 @@ const Table = () => {
       </table>
       <Paginate data={data} />
       </div> 
-      <Modal showModal={showModal} setShowModal={setShowModal} users={users} />
+      <Modal showModal={showModal} setShowModal={setShowModal} data={data} />
       </>
     )
   

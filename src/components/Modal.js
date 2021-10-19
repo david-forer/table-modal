@@ -3,8 +3,10 @@ import { HiX } from "react-icons/hi";
 import './modal.css'
 
 
-const Modal = ({ showModal, setShowModal, users }) => {
-  console.log(users)
+const Modal = ({ showModal, setShowModal, data }) => {
+  // const { email, first_name, last_name, avatar  } = data;
+
+  console.log(data)
   return <>{showModal ? 
   <div className="modalContainer">
       <div className="modal">

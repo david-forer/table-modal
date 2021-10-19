@@ -11,7 +11,9 @@ const baseURL = `https://reqres.in/api/users`;
 const Table = () => {
   const [users, setUsers] = useState();
   const [showModal, setShowModal] = useState(false)
-  const [currentPage, setCurrentPage] = useState()
+  const [data, setData] = useState()
+  // const [currentPage, setCurrentPage] = useState()
+
  
   const handleShow = () => {
     console.log('clicked')
@@ -21,10 +23,17 @@ const Table = () => {
   useEffect(() => {
     axios.get(baseURL).then((res) => {
       const resUsers = res.data;
-      console.log(resUsers);
       setUsers(resUsers);
     });
   }, []);
+
+  useEffect(() => {
+    axios.get(baseURL).then((res) => {
+      const data = res.data;
+    //  console.log(data)
+      setData(data);
+    });
+  },[]);
 
 
   return (
@@ -52,7 +61,7 @@ const Table = () => {
             ))}
         </tbody>
       </table>
-      <Paginate currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+      <Paginate data={data} />
       </div> 
       <Modal showModal={showModal} setShowModal={setShowModal} />
       </>

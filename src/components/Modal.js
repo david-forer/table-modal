@@ -1,5 +1,6 @@
 import React from "react";
 import { HiX } from "react-icons/hi";
+import './modal.css'
 
 
 const Modal = ({ showModal, setShowModal, users }) => {

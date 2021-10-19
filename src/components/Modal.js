@@ -1,22 +1,25 @@
-import React from 'react'
+import React from "react";
+import { HiX } from "react-icons/hi";
 
-const ShowModal = () => {
-  return (
-<div className="modal">
-  This is a Modal
-</div>
-  )
-}
 
-const Modal = ({showModal, setShowModal}) => {
-  return (
-    <>
-    {showModal ? 
-    
-    <ShowModal /> : null}
-      
-    </>
-  )
-}
+const Modal = ({ showModal, setShowModal, users }) => {
+  console.log(users)
+  return <>{showModal ? 
+  <div className="modalContainer">
+      <div className="modal">
+        <header className="modal_header">
+          <h2 className="modal_header-title">Modal for person </h2>
+        </header>
+        <main className="modal_content">This is Modal Content</main>
+        <footer className="modal_footer">
+          <button className="close"  onClick={() => window.close()}>
+            <HiX alt="close" />
+          </button>
+        </footer>
+      </div>
+    </div>
+  
+   : null}</>;
+};
 
-export default Modal
+export default Modal;

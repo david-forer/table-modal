@@ -14,8 +14,7 @@ const Table = () => {
   const [data, setData] = useState()
   // const [currentPage, setCurrentPage] = useState()
 
- 
-  const handleShow = () => {
+    const handleShow = () => {
     console.log('clicked')
     setShowModal(prev => !prev)
   }
@@ -63,7 +62,7 @@ const Table = () => {
       </table>
       <Paginate data={data} />
       </div> 
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <Modal showModal={showModal} setShowModal={setShowModal} users={users} />
       </>
     )
   
